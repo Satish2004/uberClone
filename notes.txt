@@ -1,0 +1,8 @@
+Phale backend  then frontend using react
+main hamare serever ka entry point hai serevr.js naki index.js package.json  se index.js hata ke server.js likhe -->   "main": "server.js",
+sath hi sath humne usme npm i express dotenv and server ko link krne ke liye front to backend usme cors use kiya  
+
+
+//to sabse pahle hum apna server setup kiye 
+// then model ki ek captain hoga user hoga and all other things  using mongoose
+
