@@ -15,11 +15,24 @@ router.post(
     // last name optional hia
     body("password")
       .isLength({ min: 7 })
-      .withMessage("First name must be at least 7 character long!")
-      .isLength({ min: 3 })
-      .withMessage("First name must be at least 3 character long!"),
+      .withMessage("First name must be at least 7 character long!"),
   ],
   userController.registerUser
+);
+
+// login route for user
+
+router.post(
+  "/login",
+  [
+    //this is checks
+    body("email").isEmail().withMessage("Invalid Email"),
+    body("password")
+      .isLength({ min: 7 })
+      .withMessage("First name must be at least 7 character long!"),
+  ],
+
+  userController.loginUser
 );
 
 module.exports = router;

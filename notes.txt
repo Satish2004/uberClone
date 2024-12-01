@@ -19,3 +19,9 @@ create services --> data base se interact karegi
 
 MVC --> model , view and  controllers framwork hai
 35tk
+
+day 2
+
+login route for user in user.router.js
+log-out route
+profile route
