@@ -6,3 +6,16 @@ sath hi sath humne usme npm i express dotenv and server ko link krne ke liye fro
 //to sabse pahle hum apna server setup kiye 
 // then model ki ek captain hoga user hoga and all other things  using mongoose
 
+
+//1st user authentiation -> create  model for use ans install mongoose package
+// then install bcrypt for haashing password nd comapring and for  generate tocket or id then we are using JSON web tocket (JWT);
+  sabhi fucntion ans logic complete hone ke bad sabhi ko routes me bhejunga all routes ka logic cotrollers ke pass jata hai to direct hm wahi send krenge
+routes krne ke liye express ki jaruat hoti hai
+then insatll express-validator
+create services --> data base se interact karegi
+//routes me jo bhi perform ya result ko dikhane ka logic hai wo controller ke express-validator --> {validationResult} me rahta hi
+
+
+
+MVC --> model , view and  controllers framwork hai
+35tk
