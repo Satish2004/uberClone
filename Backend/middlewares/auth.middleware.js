@@ -10,6 +10,13 @@ module.exports.authUser = async (req, res, next) => {
     return res.status(401).json({ message: "Unauthorized" });
   }
   //ab hume token verify karna hai mainly decrypt karna hai
+
+  const isBlacklisted = await blacklistToken.findOne({ token: token });
+
+  if (isBlacklisted) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await userModel.findById(decoded.id);

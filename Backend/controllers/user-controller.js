@@ -1,6 +1,7 @@
 const userModel = require("../models/user.model");
 const userService = require("../services/user.service");
 const { validationResult } = require("express-validator");
+const blacklistToken = require("../models/blacklistToken.model");
 
 // authentication-->
 // this is registerUser router controller
@@ -43,7 +44,7 @@ module.exports.loginUser = async (req, res, next) => {
 
   //agar sahi rhti hai
   const token = user.generateAuthTocken();
-  res.cookie("token", token);  // ye like authentication ke liye hota hai cookies me token save karne ke liye jo pahle header me bhi bhejata hai aur cookie me bhi aur 
+  res.cookie("token", token); // ye like authentication ke liye hota hai cookies me token save karne ke liye jo pahle header me bhi bhejata hai aur cookie me bhi aur
   // ye cookie wala hai
 
   res.status(200).json({ token, user });
@@ -52,4 +53,12 @@ module.exports.loginUser = async (req, res, next) => {
 module.exports.getUserProfile = async (req, res, next) => {
   //to isme ek functionallity dena hi ki hume middleware ke sath jo bhi user login hai nahi pahle check kro then check kro hai to profile dikha do nahi to error fake do usi ko banane ke liye ek naya folder banate hai middleware folder
   res.status(200).json(req.user);
+};
+//  this is our logout route controller
+
+module.exports.logoutUser = async (req, res, next) => {
+  res.clearCookie("token");
+  const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
+  await blacklistToken.create({ token });
+  res.status(200).json({ message: "Logout Successfully" });
 };

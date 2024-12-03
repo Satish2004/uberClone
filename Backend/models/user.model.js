@@ -31,8 +31,10 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.methods.generateAuthTocken = function () {
-  const tocken = jwt.sign({ _id: this._id }, process.env.JWT_SECRET);
-  return tocken;
+  const token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET, {
+    expiresIn: "24h",
+  });
+  return token;
 };
 
 // and now jaise hi tocken generate hua bcrypt se compare kro
@@ -42,8 +44,8 @@ userSchema.methods.comparePassword = async function (password) {
 
 // thoda hash kiye
 userSchema.statics.hashPassword = async function (password) {
-    return await bcrypt.hash(password, 10);
-  };
+  return await bcrypt.hash(password, 10);
+};
 
 const userModel = mongoose.model("user", userSchema);
 module.exports = userModel;

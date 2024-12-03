@@ -38,3 +38,15 @@ getUserProfile route---  //to isme ek functionallity dena hi ki hume middleware 
   // ye cookie wala hai
 
   1.03  --> create blacklistTocken ->model
+  TTL -> time to leave  --> partyicular time par delete automatically
+  jab user authenticate hota hai to us user ko sirf 24 hrs k liye hi cookie save krega baki database se bhi nikal dega
+
+
+
+//CAPTAIN MODEL
+//day 3
+same work captain ke liye krna hai
+
+
+
+  
