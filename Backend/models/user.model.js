@@ -3,6 +3,8 @@ const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
+
+  // this is the schema of the user means blueprint of the user
   fullname: {
     firstname: {
       type: String,
@@ -29,6 +31,9 @@ const userSchema = new mongoose.Schema({
     },
   },
 });
+
+
+// here is the main logic of authentication and authorization  and there are perform logic in userSchema.methods
 
 userSchema.methods.generateAuthTocken = function () {
   const token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET, {

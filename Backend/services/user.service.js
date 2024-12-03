@@ -19,5 +19,5 @@ module.exports.createUser = async ({
     password, // ye direct password nahi rahega jaha call krenege uske pahle hum ise hash form me convert kr lenege then use hi  db me store kara denge
   });
 
-  
+  return user;
 };

@@ -1,3 +1,20 @@
+                  This code selection appears to be a set of notes or comments related to the development of an application similar to Uber. It seems to be documenting the steps and tasks involved in setting up the backend and frontend of the application using React.
+
+                  The notes mention the following key points:
+
+                  - The entry point for the server is specified as "server.js" in the "main" field of the package.json file.
+                  - The Express framework is used for handling routes and server-side logic.
+                  - The "cors" package is used to enable cross-origin resource sharing between the frontend and backend.
+                  - The application follows the MVC (Model-View-Controller) framework, with separate folders for models, views, and controllers.
+                  - User authentication is implemented using a model for users and packages like bcrypt for password hashing and JSON web tokens (JWT) for generating tokens.
+                  - Express-validator is used for validating and sanitizing user input in the routes.
+                  - Services are created to interact with the database.
+                  - Middleware is used to handle user authentication and protect certain routes.
+                  - The code also mentions the creation of models and logic for captains, including generating authentication tokens and comparing passwords.
+
+                  Please note that this documentation is based on the provided code selection and may not cover all aspects of the application. It is recommended to refer to the actual codebase and any additional documentation for a comprehensive understanding of the project.
+
+                  For more detailed documentation, please refer to the README.md file in the project repository.
                   (DAY - 1)-->
 
 Phale backend  then frontend using react
@@ -43,10 +60,21 @@ getUserProfile route---  //to isme ek functionallity dena hi ki hume middleware 
 
 
 
-//CAPTAIN MODEL
-//day 3
-same work captain ke liye krna hai
 
+
+//CAPTAIN MODEL
+//DAY- 3
+same work captain ke liye krna hai
+create model same as user like fullname -> first name , last name 
+vechical color capacity all about target to the captain 
+
+then target to Schema and create logic like captainSchema.module.exports --> make logic of generateAuthTocken then inside the tocken we get the tocken for cookies to expairs under the 24 headers
+then create a compared pass and convert that password in hash password then create a logic to if captain and for user login again into the webite then ask to authenticate but ensure that u r password convert in hash password and prev store hashpass compare the further process yepp good to goo
+
+then create routes-> captain.route.js and controller -> captain-controller.js then route ki  sabhi logic controller me likhi jati hai uske bad use route me lekar routing krte hai fir app.js ko dete hai
+yaha se bhi middleware function genearte hota hi ki wo routes me jaye then routes se to easily uske logic means controller ke pass ja sakte hai 
+
+then we create captain.service.js 
 
 
   
