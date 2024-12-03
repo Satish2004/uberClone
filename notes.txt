@@ -1,3 +1,5 @@
+                  (DAY - 1)-->
+
 Phale backend  then frontend using react
 main hamare serever ka entry point hai serevr.js naki index.js package.json  se index.js hata ke server.js likhe -->   "main": "server.js",
 sath hi sath humne usme npm i express dotenv and server ko link krne ke liye front to backend usme cors use kiya  
@@ -20,8 +22,19 @@ create services --> data base se interact karegi
 MVC --> model , view and  controllers framwork hai
 35tk
 
-day 2
 
+
+(DAY-2)
+
+abhi tak humne register route kiya hai then niche ke sb krenge for all user 
+// captain ke liye baki hi
 login route for user in user.router.js
 log-out route
-profile route
+getUserProfile route---  //to isme ek functionallity dena hi ki hume middleware ke sath jo bhi user login hai nahi pahle check kro then check kro hai to profile dikha do nahi to error fake do usi ko banane ke liye ek naya folder banate hai middleware folder 
+
+//jb hum decrypy kr rhe hai tb authUser me to tocken hum do jagah se le skate hai header se aur cookie se(app.js me require kro cookie-parser ko pahle) 
+// (_1_)  header se lene ke liye jb api testing krte hia postman api se key me authorization aur value me bearer then space then tocken jo generate hua rahta hai use paste krte hai
+// (_2_)  cookie se    res.cookie("token", token);  // ye like authentication ke liye hota hai cookies me token save karne ke liye jo pahle header me bhi bhejata hai aur cookie me bhi aur 
+  // ye cookie wala hai
+
+  1.03  --> create blacklistTocken ->model

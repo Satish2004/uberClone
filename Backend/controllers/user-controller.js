@@ -43,5 +43,13 @@ module.exports.loginUser = async (req, res, next) => {
 
   //agar sahi rhti hai
   const token = user.generateAuthTocken();
+  res.cookie("token", token);  // ye like authentication ke liye hota hai cookies me token save karne ke liye jo pahle header me bhi bhejata hai aur cookie me bhi aur 
+  // ye cookie wala hai
+
   res.status(200).json({ token, user });
+};
+//  this is our getUserProfile route controller
+module.exports.getUserProfile = async (req, res, next) => {
+  //to isme ek functionallity dena hi ki hume middleware ke sath jo bhi user login hai nahi pahle check kro then check kro hai to profile dikha do nahi to error fake do usi ko banane ke liye ek naya folder banate hai middleware folder
+  res.status(200).json(req.user);
 };

@@ -2,9 +2,14 @@ const express = require("express");
 const router = express.Router();
 const { body } = require("express-validator");
 const userController = require("../controllers/user-controller");
+const authMiddleware = require("../middlewares/auth.middleware");
 
 // express-validor --> validate all models data before the routing
 //create all routes logic in controllers
+
+//user-->
+
+// (1)register POST
 router.post(
   "/register",
   [
@@ -20,7 +25,7 @@ router.post(
   userController.registerUser
 );
 
-// login route for user
+// (2)login route for user  POST
 
 router.post(
   "/login",
@@ -34,5 +39,9 @@ router.post(
 
   userController.loginUser
 );
+
+//(3) profile route GET;;
+
+router.get("/profile", authMiddleware.authUser, userController.getUserProfile);
 
 module.exports = router;
