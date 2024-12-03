@@ -37,7 +37,7 @@ create services --> data base se interact karegi
 
 
 MVC --> model , view and  controllers framwork hai
-35tk
+
 
 
 
@@ -54,7 +54,7 @@ getUserProfile route---  //to isme ek functionallity dena hi ki hume middleware 
 // (_2_)  cookie se    res.cookie("token", token);  // ye like authentication ke liye hota hai cookies me token save karne ke liye jo pahle header me bhi bhejata hai aur cookie me bhi aur 
   // ye cookie wala hai
 
-  1.03  --> create blacklistTocken ->model
+create blacklistTocken ->model
   TTL -> time to leave  --> partyicular time par delete automatically
   jab user authenticate hota hai to us user ko sirf 24 hrs k liye hi cookie save krega baki database se bhi nikal dega
 
@@ -75,6 +75,10 @@ then create routes-> captain.route.js and controller -> captain-controller.js th
 yaha se bhi middleware function genearte hota hi ki wo routes me jaye then routes se to easily uske logic means controller ke pass ja sakte hai 
 
 then we create captain.service.js 
+
+1,,30
+
+
 
 
   
