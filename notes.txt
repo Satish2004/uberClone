@@ -88,7 +88,16 @@ captian login and logout feature -> routes->captain.routes.js me kaam hai contro
 //creating login and logout client side me
 Routing kiye uske liye npm i react-router-dom use kiye 
 // main.jsx me import {BrowserRouter} kiye the App.jsx ko wrapp kiye taki app me chale
+ button class name w-full  flex items-center justify-center text-xl bg-black text-white rounded-full hover:bg-slate-900 p-3 text-center align-middle
+ 
+ then two way binding krenge 
+ jisme useState banayenge ek email ke liye and ek password ke liye 
+ // two way binding krte hai to uski value me email and password then hai jisme se baad me usko onchange ke sath setEmail and setPassword ke event.target.value ko change krwake show krte hai jisse react 
+ ko bhi pata chalta hai
 
+ create captainLogin page same as userLogin
+
+ then create userSignup and captaiSignup 
  
 
-  button class name w-full  flex items-center justify-center text-xl bg-black text-white rounded-full hover:bg-slate-900 p-3 text-center align-middle
+ 
