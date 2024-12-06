@@ -76,9 +76,19 @@ yaha se bhi middleware function genearte hota hi ki wo routes me jaye then route
 
 then we create captain.service.js 
 
-1,,30
 
 
+//DAY- 4
+captian login and logout feature -> routes->captain.routes.js me kaam hai controlers-> captain-controller.js me  and auth.middleware.js -> authCaptain me 
 
 
-  
+//CLIENT SIDE-->
+
+//then work in React and then at the end how to connect/integrate react  with  backend
+//creating login and logout client side me
+Routing kiye uske liye npm i react-router-dom use kiye 
+// main.jsx me import {BrowserRouter} kiye the App.jsx ko wrapp kiye taki app me chale
+
+ 
+
+  button class name w-full  flex items-center justify-center text-xl bg-black text-white rounded-full hover:bg-slate-900 p-3 text-center align-middle

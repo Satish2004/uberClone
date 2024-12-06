@@ -13,6 +13,7 @@ const captainRoutes = require("./routes/captain.routes");
 //then call mongoDB server
 connectToDb();
 
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
