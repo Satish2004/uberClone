@@ -48,7 +48,7 @@ const UserLogin = () => {
             className=" bg-[#eeee] rounded px-4 py-2 border w-full mb-4 text-sm placeholder:text-sm"
           />
           <button className="bg-black font-semibold hover:bg-slate-800 text-white p-2 mt-2 w-full rounded-full text-xl">
-            Login
+            Login as user
           </button>
           <Link to={"/signup"} className="mb-3 text-blue">
             <span className=" text-center text-blue-700  hover:text-blue-500">

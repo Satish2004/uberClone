@@ -48,13 +48,13 @@ const Captainlogin = () => {
             className=" bg-[#eeee] rounded px-4 py-2 border w-full mb-4 text-sm placeholder:text-sm"
           />
           <button className="bg-black font-semibold hover:bg-slate-800 text-white p-2 mt-2 w-full rounded-full text-xl">
-            Login
+            Login as Captain
           </button>
           <Link to={"/captain-signup"} className="mb-3 text-blue">
             <span className=" text-center text-blue-700  hover:text-blue-500">
               {" "}
-              <span className="text-black">Want to Register ? </span>
-              as Captain
+              <span className="text-black">Want to ? </span>
+              Register as Captain
             </span>
           </Link>
         </form>

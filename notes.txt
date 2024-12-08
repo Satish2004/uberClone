@@ -82,6 +82,8 @@ then we create captain.service.js
 captian login and logout feature -> routes->captain.routes.js me kaam hai controlers-> captain-controller.js me  and auth.middleware.js -> authCaptain me 
 
 
+
+
 //CLIENT SIDE-->
 
 //then work in React and then at the end how to connect/integrate react  with  backend
@@ -97,7 +99,48 @@ Routing kiye uske liye npm i react-router-dom use kiye
 
  create captainLogin page same as userLogin
 
+DAY 5-->
  then create userSignup and captaiSignup 
+after that we create context -> context centerlized our data basically it is overcome the props
+uh can use redux in place of context 
+
+(1) first of all you need to wrap all the app.jsx in main.jsx
+like <UserContext> 
+   <BrowserRouter> -> ye routing ke liye tha
+      <App />
+    </BrowserRouter> 
+    </UserContext> --> ye context api ke liye hai jisko bhi data lena ho yaha is folder se le lena direct hoga props se overcome hoga nahi to dikkat aati hai
+      >Example heading<span
+        class="badge bg-primary"
+        >New</span
+      ><hai
+    >
+    and import UserContext in main also
+
+    then 
+   example--->
+
+   import React from "react";
+
+//context which pass data in further components
+export const userDataContext = React.createContext();
+
+const userContext = ({ children }) => {
+  return (
+    <div>
+      {/* pass data in further components */}
+      <userDataContext.Provider>{children}</userDataContext.Provider>
+    </div>
+  );
+};
+
+export default userContext;
+
+
+//backend code 3hrs
+
+    
+
  
 
  
