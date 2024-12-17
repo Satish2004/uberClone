@@ -8,11 +8,9 @@ const captainSchema = new mongoose.Schema({
     firstname: {
       type: String,
       required: true,
-      minlength: [3, "First name must be at least 3 character long!"],
     },
     lastname: {
       type: String,
-      minlength: [3, "Last name must be at least 3 character long!"],
     },
   },
   email: {
@@ -39,21 +37,18 @@ const captainSchema = new mongoose.Schema({
     color: {
       type: String,
       required: true,
-      minlength: [3, "Color must be at least 3 character long!"],
     },
     plate: {
       type: String,
       required: true,
-      minlength: [3, "Plate must be at least 3 character long!"],
     },
     capacity: {
       type: Number,
       required: true,
-      min: [1, "Capacity must be at least 1!"], // capacity of the vehicle which means how many passengers can be seated in the vehicle include the captain
     },
     vehicalType: {
       type: String,
-      enum: ["bike", "car", "auto"],
+      enum: [ 'car', 'motorcycle', 'auto' ],
       required: true,
     },
   },

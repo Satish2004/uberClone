@@ -15,7 +15,7 @@ const UserContext = ({ children }) => {
   return (
     <div>
       {/* pass data in further components */}
-      <userDataContext.Provider value={[user, setUser]}>
+      <userDataContext.Provider value={{ user, setUser }}>
         {children}
       </userDataContext.Provider>
     </div>

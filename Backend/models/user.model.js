@@ -3,22 +3,18 @@ const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-
   // this is the schema of the user means blueprint of the user
   fullname: {
     firstname: {
       type: String,
       required: true,
-      minlength: [3, "First name must be atleast 3 characters long"],
     },
     lastname: {
       type: String,
-      minlength: [7, "Last name must be atleast 7 characters long"],
     },
     email: {
       type: String,
       require: true,
-      minlength: [7, "email  must be atleast 7 characters long"],
     },
     password: {
       type: String,
@@ -31,7 +27,6 @@ const userSchema = new mongoose.Schema({
     },
   },
 });
-
 
 // here is the main logic of authentication and authorization  and there are perform logic in userSchema.methods
 

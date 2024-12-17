@@ -15,11 +15,11 @@ router.post(
   [
     body("email").isEmail().withMessage("Invalid Email"),
     body("fullname.firstname")
-      .isLength({ min: 3 })
+      .isLength()
       .withMessage("First name must be at least 3 character long!"),
     // last name optional hia
     body("password")
-      .isLength({ min: 7 })
+      .isLength()
       .withMessage("First name must be at least 7 character long!"),
   ],
   userController.registerUser
@@ -33,7 +33,7 @@ router.post(
     //this is checks
     body("email").isEmail().withMessage("Invalid Email"),
     body("password")
-      .isLength({ min: 7 })
+      .isLength()
       .withMessage("First name must be at least 7 character long!"),
   ],
 

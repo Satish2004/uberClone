@@ -1,3 +1,6 @@
+                  BACKEND -->
+
+                  
                   This code selection appears to be a set of notes or comments related to the development of an application similar to Uber. It seems to be documenting the steps and tasks involved in setting up the backend and frontend of the application using React.
 
                   The notes mention the following key points:
@@ -18,6 +21,7 @@
                   (DAY - 1)-->
 
 Phale backend  then frontend using react
+
 main hamare serever ka entry point hai serevr.js naki index.js package.json  se index.js hata ke server.js likhe -->   "main": "server.js",
 sath hi sath humne usme npm i express dotenv and server ko link krne ke liye front to backend usme cors use kiya  
 
@@ -136,8 +140,48 @@ const userContext = ({ children }) => {
 
 export default userContext;
 
+//BACKEND-->
+DAY 6-->
+all the components integarte with backend 
+if any one push their code in other branch like satish and i want to pull request from that satish branch to main branch so simply i will
+--> git pull origit satish
+--> then come file like MERGE_MSG this type of file and write Merge branch ' satish' with main 
+--> git push ->enter
 
-//backend code 3hrs
+-------------------------------------------------------------------------------------------------------------------------------->
+//Integrationg user endpoint with react
+USER_SIGNUP=>
+// and now we will working with userSignup firstly
+// now kya krenge sabse phle userSignup me create acound krega jisko backend me le jake data base store krke home me naviagte krenge
+//frontend me kya kr rahe the hum  log jo bhi user signup kr ke data fill kr rha tha use console me hi -print krke e.preventDefault kr rhe the
+// but mujhe is data ko server tak pahuchana hai but iske liye server tak jodne ke liye axios use hota hai jo client se data ko server tk leke show krega uske api jaise use krke
+axios ke through userSignup ko regiser wale page me le ja rhe hai server preventDefault
+//axios but kaam nahi kr raha hai jb hum data server me bhej rhe hai to axios error dikha rha hia
+// iske badd userLogin bhi banaye userprotext.jsx se
+then Userlogout banaye
+ab login kiye --> home me gaye ok
+then logout kiye -> login me aaye ok
+ab logout krne ke baad redirect login page --> ye implement kiye
+
+
+// in the axios we are not sure why the error is comming in console 3:10:56 --> i am solved this error because i am not give the proper name at least 7 charact atll field should be contain atleast 7 letter first name , last name ,email and password then work
+then same work kiye usersignup ke liye kar liye ab and login both ke liye axios client se data behjo server ke pass - login dikat hai
+
+// yaha directly kya ho rha haijb main signup kar raha hu to home jaunga
+// then waha se tocken generate hoga wo tockern se identify karega agr token aur login karne wala user match ho gya tab login hoga nahi to message invalid or password ayega
+
+DAY-7
+//Integrationg captain endpoint with react
+make same jsx files like Captaincontext 
+
+first make captain register and redirect to the captain-home -> but its not work maain problem is in LOCAL HOST 400 and network connections
+
+//make login work in This
+3:40:00
+
+
+
+
 
     
 

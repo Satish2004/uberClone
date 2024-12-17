@@ -11,20 +11,20 @@ router.post(
   [
     body("email").isEmail().withMessage("Invalid Email"),
     body("fullname.firstname")
-      .isLength({ min: 3 })
+      .isLength()
       .withMessage("First name must be at least 3 character long!"),
     // last name optional hia
     body("password")
-      .isLength({ min: 7 })
+      .isLength()
       .withMessage("Password must be at least 7 character long!"),
     body("vehicle.color")
-      .isLength({ min: 3 })
+      .isLength()
       .withMessage("color must be at least 3 character long!"),
     body("vehicle.plate")
-      .isLength({ min: 3 })
+      .isLength()
       .withMessage("plate must be at least 3 character long!"),
     body("vehicle.capacity")
-      .isLength({ min: 1 })
+      .isLength()
       .withMessage("capacity must be at least 1!"),
     body("vehicle.vehicalType")
       .isIn(["bike", "car", "auto"])
@@ -34,17 +34,29 @@ router.post(
 );
 
 // login route
-router.post("/login", [
-  body("email").isEmail().withMessage("Invalid Email"),
-  body("password")
-    .isLength({ min: 7 })
-    .withMessage("Password must be at least 7 character long!"),
-], captainController.loginCaptain); 
+router.post(
+  "/login",
+  [
+    body("email").isEmail().withMessage("Invalid Email"),
+    body("password")
+      .isLength()
+      .withMessage("Password must be at least 7 character long!"),
+  ],
+  captainController.loginCaptain
+);
 
 // get profile route
-router.get("/profile", authMiddleware.authCaptain, captainController.getCaptainProfile);
+router.get(
+  "/profile",
+  authMiddleware.authCaptain,
+  captainController.getCaptainProfile
+);
 
 // logout route
-router.post("/logout", authMiddleware.authCaptain, captainController.logoutCaptain);
+router.post(
+  "/logout",
+  authMiddleware.authCaptain,
+  captainController.logoutCaptain
+);
 
 module.exports = router;

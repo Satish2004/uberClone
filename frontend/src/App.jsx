@@ -1,22 +1,47 @@
 import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+// user
+import Start from "./pages/Start";
 import UserLogin from "./pages/UserLogin";
 import UserSignup from "./pages/UserSignup";
 import Captainlogin from "./pages/Captainlogin";
-import Captainsignup from "./pages/Captainsignup";
-// import { UserDataContext } from "./context/UserContext";
+import Captainsignup from "./pages/CaptainSignup";
+import Home from "./pages/Home";
+import UserProtectWrapper from "./pages/UserProtectWrapper";
+import UserLogout from "./pages/UserLogout";
+// Captain
+import CaptainHome from "./pages/CaptainHome";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        {/* Add your routes here */}
-        <Route path="/" element={<Home />} />
+        {/* USER ROUTES -> REGISTER , LOGIN , LOGOUT  FROM THE FRONTEND AND SEND THEIR VALUE IN SERVER USING AXIOS */}
+        <Route path="/" element={<Start />} />
         <Route path="/login" element={<UserLogin />} />
         <Route path="/signup" element={<UserSignup />} />
         <Route path="/captain-login" element={<Captainlogin />} />
         <Route path="/captain-signup" element={<Captainsignup />} />
+        <Route
+          path="/home"
+          element={
+            <UserProtectWrapper>
+              <Home />
+            </UserProtectWrapper>
+          }
+        />
+        <Route
+          path="/user/logout"
+          element={
+            <UserProtectWrapper>
+              <UserLogout />
+            </UserProtectWrapper>
+          }
+        />
+
+        {/* FOR CAPTAIN ROUTES -> REGISTER , LOGIN , LOGOUT  */}
+        <Route path="/captain-home" element={<CaptainHome />} />
+        
       </Routes>
     </div>
   );
