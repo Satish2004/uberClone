@@ -1,10 +1,8 @@
 import React, { createContext, useState } from "react";
 
-//context which pass data in further components
-export const userDataContext = createContext();
+export const UserDataContext = createContext();
 
 const UserContext = ({ children }) => {
-  //making data
   const [user, setUser] = useState({
     email: "",
     fullName: {
@@ -12,12 +10,12 @@ const UserContext = ({ children }) => {
       lastName: "",
     },
   });
+
   return (
     <div>
-      {/* pass data in further components */}
-      <userDataContext.Provider value={{ user, setUser }}>
+      <UserDataContext.Provider value={{ user, setUser }}>
         {children}
-      </userDataContext.Provider>
+      </UserDataContext.Provider>
     </div>
   );
 };
