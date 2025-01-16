@@ -6,6 +6,8 @@ import "remixicon/fonts/remixicon.css";
 import LocationSearchPanel from "../components/LocationSearchPannel";
 import VehiclePanel from "../components/VehiclePanel";
 import ConfirmedRide from "../components/ConfirmedRide";
+import LookingForDriver from "../components/LookingForDriver";
+import WaitingForDriver from "../components/WaitingForDriver";
 
 const Home = () => {
   const [destination, setDestination] = useState("");
@@ -13,9 +15,14 @@ const Home = () => {
   const vehiclePanelRef = useRef(null);
   const panelRef = useRef(null);
   const panelCloseRef = useRef(null);
+  const vehicalFoundRef = useRef(null);
   const ConfirmedRidePanelRef = useRef(null);
+  const waitingForDriverRef = useRef(null);
+
   const [vehiclePanel, setVehiclePanel] = useState(false);
   const [ConfirmedRidePanel, setConfirmedRidePanel] = useState(false);
+  const [vehicalFound, setVehicleFound] = useState(false);
+  const [waitingForDriver, setWaitingForDriver] = useState(false);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -74,6 +81,36 @@ const Home = () => {
     [ConfirmedRidePanel]
   );
 
+  useGSAP(
+    function () {
+      if (vehicalFound) {
+        gsap.to(vehicalFoundRef.current, {
+          transform: "translateY(0)",
+        });
+      } else {
+        gsap.to(vehicalFoundRef.current, {
+          transform: "translateY(100%)",
+        });
+      }
+    },
+    [vehicalFound]
+  );
+
+  useGSAP(
+    function () {
+      if (waitingForDriver) {
+        gsap.to(waitingForDriverRef.current, {
+          transform: "translateY(0)",
+        });
+      } else {
+        gsap.to(waitingForDriverRef.current, {
+          transform: "translateY(100%)",
+        });
+      }
+    },
+    [waitingForDriver]
+  );
+
   return (
     <div className="h-screen relative overflow-hidden">
       <img
@@ -81,7 +118,12 @@ const Home = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png"
         alt=""
       />
-      <div className="h-screen w-screen">
+      <div
+        onClick={() => {
+          setVehiclePanel(false);
+        }}
+        className="h-screen w-screen"
+      >
         {/* image for temporary use  */}
         <img
           className="w-full h-full object-cover"
@@ -120,7 +162,6 @@ const Home = () => {
               onClick={() => {
                 setPanelOpen(true);
               }}
-              // value={destination}
               className="bg-[#eee] px-12 py-2 text-lg rounded-lg w-full  mt-3"
               type="text"
               placeholder="Enter your destination"
@@ -152,10 +193,28 @@ const Home = () => {
         ref={ConfirmedRidePanelRef}
         className="fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12"
       >
-        <ConfirmedRide setConfirmedRidePanel={setConfirmedRidePanel} />
+        <ConfirmedRide
+          setConfirmedRidePanel={setConfirmedRidePanel}
+          setVehicleFound={setVehicleFound}
+          setVehiclePanel={setVehiclePanel}
+        />
       </div>
 
-      {/* other ref */}
+      {/* after click on confirm then wait for driver  */}
+      <div
+        ref={vehicalFoundRef}
+        className="fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12"
+      >
+        <LookingForDriver setVehicleFound={setVehicleFound} />
+      </div>
+      {/* waiting  */}
+
+      <div
+        // ref={waitingForDriverRef}
+        className="fixed w-full z-10 bottom-0 bg-white px-3 py-10 pt-12"
+      >
+        <WaitingForDriver setWaitingForDriver={setWaitingForDriver} />
+      </div>
     </div>
   );
 };

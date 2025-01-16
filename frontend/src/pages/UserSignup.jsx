@@ -20,7 +20,7 @@ const UserSignup = () => {
       fullname: {
         firstname: firstName,
         lastname: lastName,
-      },
+      }, 
       email: email,
       password: password,
     };
