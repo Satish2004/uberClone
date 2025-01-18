@@ -178,8 +178,14 @@ first make captain register and redirect to the captain-home -> but its not work
 
 //make login work in This
 
-53535
+mujhe waitingForDriver aur Riding wale ui me change karna hai ui wiith image
+mujhe app.jsx me se captain-home route hai uske protected hai use baad me comment off krna hoga taki use autentication se banan sake 
+pages me routes wale hai
+aur componenet me sliding wale hai pages hai
 
+//AB DEKHO MERA JO CAPTAIN HAI USE ACCEPT KRKE CONFIRM ME JAA REHA HAI THEN USKO MAI ROUTE SE REAL MAP SE INTEGRATE KARUNGA JO CAPTAINrIDING WALA PAGE HAI WO WAHI HAI
+
+//7 map real
 
 
 
