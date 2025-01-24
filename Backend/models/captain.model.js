@@ -55,7 +55,7 @@ const captainSchema = new mongoose.Schema({
 
   location: {
     // we are using the langitude and latitude for the exact location to mark the user on the map
-    lat: {
+    ltd: {
       type: Number,
     },
     lng: {

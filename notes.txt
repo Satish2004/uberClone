@@ -185,7 +185,36 @@ aur componenet me sliding wale hai pages hai
 
 //AB DEKHO MERA JO CAPTAIN HAI USE ACCEPT KRKE CONFIRM ME JAA REHA HAI THEN USKO MAI ROUTE SE REAL MAP SE INTEGRATE KARUNGA JO CAPTAINrIDING WALA PAGE HAI WO WAHI HAI
 
-//7 map real
+//Finised Riding banaye taki captain jo otp dala hai waha se confirm krne ke baad use lekar finished jsx component me aa 
+
+NOTE= axios url ko hit krta hai or usse data mangata hai\
+
+map route jo hai app.js me uske andar teen routes hai getCoordinate getDistanceTime and getAutoCompleteSuggestions  
+
+map real  --> integrated with the help of backend console.cloude.google
+// isme do bhejenge routes me ki ek routes se lat long nikal ke bhejenge aur ek routes se address nikal ke bhejenge ya fir travel krne me distance and time kya kya hoga
+
+
+
+825
+WORK IN FRONTEND MIX OF BACKEND
+  sabse pahle home jsx me jb user input dalega pickup and destination ka tab use axios ke help se backend server se show kara dena hai localSearch pannel me
+
+
+done-->
+Homejsx
+loactionpanel
+vehicle pannel
+confirmRidePanel
+LookingForDriver
+
+
+captain Home
+captain detail
+UserContext
+SocketContext-> make then use
+main.jsx
+10.20.23
 
 
 

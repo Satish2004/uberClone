@@ -11,10 +11,11 @@ import UserProtectWrapper from "./pages/UserProtectWrapper";
 import UserLogout from "./pages/UserLogout";
 // Captain
 import CaptainHome from "./pages/CaptainHome";
-//import { CaptainDataContext } from "./context/CaptainContext";
-//import CaptainProtectWrapper from "./pages/CaptainProtectWrapper";
+// import { CaptainDataContext } from "./context/CaptainContext";
+// import CaptainProtectWrapper from "./pages/CaptainProtectWrapper";
 import Riding from "./pages/Riding";
 import CaptainRiding from "./pages/CaptainRiding";
+import "remixicon/fonts/remixicon.css";
 
 const App = () => {
   return (
